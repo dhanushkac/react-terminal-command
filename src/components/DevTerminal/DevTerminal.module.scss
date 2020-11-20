@@ -2,7 +2,6 @@
 
 .terminal {
   border-radius: 5px;
-  border: 1px solid $lightGray;
   padding: 0.5rem 1rem 1rem;
   background-color: $white;
   font-family: 'Roboto Mono', monospace;
@@ -14,7 +13,6 @@
 
 .terminalDark {
   border-radius: 5px;
-  border: 1px solid $black;
   padding: 0.5rem 1rem 1rem;
   background-color: $black;
   font-family: 'Roboto Mono', monospace;
