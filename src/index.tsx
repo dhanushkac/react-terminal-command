@@ -12,7 +12,7 @@ interface Props {
   color?: Color
 }
 
-function ReactTerminalCommand({ command, withDark, color }: Props) {
+const ReactTerminalCommand = ({ command, withDark, color }: Props) => {
   const [theme, setTheme] = React.useState(Theme.Light)
 
   React.useEffect(() => {
@@ -27,8 +27,10 @@ function ReactTerminalCommand({ command, withDark, color }: Props) {
     }
   }
 
+  const _color = color || Color.RED
+
   return (
-    <ThemeContext.Provider value={{ theme, color, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, color: _color, toggleTheme }}>
       <CommandContext.Provider value={{ command }}>
         <div className={styles.container}>
           <DevTerminal />
@@ -39,6 +41,5 @@ function ReactTerminalCommand({ command, withDark, color }: Props) {
 }
 
 const CommandColor = Color
-export { CommandColor }
 
-export default ReactTerminalCommand
+export { ReactTerminalCommand, CommandColor }

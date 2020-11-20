@@ -11,25 +11,32 @@ const DevTerminalContent = () => {
   const isDark = theme === Theme.Dark
   const processed = makeCommand(command)
 
-  let lightColor = styles.terminalContentRed
-  let darkColor = styles.terminalContentDarkRed
+  type colorMap = Record<Color, { lightColor: string; darkColor: string }>
 
-  if (color === Color.RED) {
-    lightColor = styles.terminalContentRed
-    darkColor = styles.terminalContentDarkRed
-  } else if (color === Color.GREEN) {
-    lightColor = styles.terminalContentGreen
-    darkColor = styles.terminalContentDarkGreen
-  } else if (color === Color.YELLOW) {
-    lightColor = styles.terminalContentYellow
-    darkColor = styles.terminalContentDarkYellow
-  } else if (color === Color.PURPLE) {
-    lightColor = styles.terminalContentPurple
-    darkColor = styles.terminalContentDarkPurple
-  } else if (color === Color.BLUE) {
-    lightColor = styles.terminalContentBlue
-    darkColor = styles.terminalContentDarkBlue
+  const colors: colorMap = {
+    [Color.RED]: {
+      lightColor: styles.terminalContentRed,
+      darkColor: styles.terminalContentDarkRed
+    },
+    [Color.YELLOW]: {
+      lightColor: styles.terminalContentYellow,
+      darkColor: styles.terminalContentDarkYellow
+    },
+    [Color.GREEN]: {
+      lightColor: styles.terminalContentGreen,
+      darkColor: styles.terminalContentDarkGreen
+    },
+    [Color.PURPLE]: {
+      lightColor: styles.terminalContentPurple,
+      darkColor: styles.terminalContentDarkPurple
+    },
+    [Color.BLUE]: {
+      lightColor: styles.terminalContentBlue,
+      darkColor: styles.terminalContentDarkBlue
+    }
   }
+
+  const { lightColor, darkColor } = colors[color]
 
   return (
     <div
