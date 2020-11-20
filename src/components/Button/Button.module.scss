@@ -1,0 +1,43 @@
+@import './../../styles/variables';
+
+.btn {
+  border-radius: 3px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: $darkGray2;
+
+  &:not(:last-child) {
+    margin-right: 1px;
+  }
+
+  &:hover {
+    background-color: $lightGray2;
+    color: $darkerGray2;
+    cursor: pointer;
+  }
+}
+
+.btnDark {
+  border-radius: 3px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: $darkGray2;
+
+  &:not(:last-child) {
+    margin-right: 1px;
+  }
+
+  &:hover {
+    background-color: $darkerGray3;
+    color: $lightGray2;
+    cursor: pointer;
+  }
+}

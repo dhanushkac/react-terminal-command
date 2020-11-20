@@ -1,0 +1,23 @@
+@import './../../styles/variables';
+
+.terminalContentDark {
+  span {
+    color: lighten($red, 20%);
+  }
+
+  &::before {
+    color: $darkGray;
+    content: '$';
+  }
+}
+
+.terminalContent {
+  span {
+    color: $red;
+  }
+
+  &::before {
+    color: $darkerGray;
+    content: '$';
+  }
+}
