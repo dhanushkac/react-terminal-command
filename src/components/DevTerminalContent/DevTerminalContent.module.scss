@@ -1,6 +1,8 @@
 @import './../../styles/variables';
 
-.terminalContentDark {
+/* RED */
+
+.terminalContentDarkRed {
   span {
     color: lighten($red, 20%);
   }
@@ -11,9 +13,105 @@
   }
 }
 
-.terminalContent {
+.terminalContentRed {
   span {
     color: $red;
+  }
+
+  &::before {
+    color: $darkerGray;
+    content: '$';
+  }
+}
+
+/*  GREEN */
+
+.terminalContentDarkGreen {
+  span {
+    color: lighten($green, 20%);
+  }
+
+  &::before {
+    color: $darkGray;
+    content: '$';
+  }
+}
+
+.terminalContentGreen {
+  span {
+    color: $green;
+  }
+
+  &::before {
+    color: $darkerGray;
+    content: '$';
+  }
+}
+
+/* YELLOW */
+
+.terminalContentDarkYellow {
+  span {
+    color: lighten($yellow, 20%);
+  }
+
+  &::before {
+    color: $darkGray;
+    content: '$';
+  }
+}
+
+.terminalContentYellow {
+  span {
+    color: $yellow;
+  }
+
+  &::before {
+    color: $darkerGray;
+    content: '$';
+  }
+}
+
+/* PURPLE */
+
+.terminalContentDarkPurple {
+  span {
+    color: lighten($purple, 20%);
+  }
+
+  &::before {
+    color: $darkGray;
+    content: '$';
+  }
+}
+
+.terminalContentPurple {
+  span {
+    color: $purple;
+  }
+
+  &::before {
+    color: $darkerGray;
+    content: '$';
+  }
+}
+
+/* BLUE */
+
+.terminalContentDarkBlue {
+  span {
+    color: lighten($blue, 20%);
+  }
+
+  &::before {
+    color: $darkGray;
+    content: '$';
+  }
+}
+
+.terminalContentBlue {
+  span {
+    color: $blue;
   }
 
   &::before {

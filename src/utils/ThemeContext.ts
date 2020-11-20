@@ -9,11 +9,13 @@ export enum Theme {
 
 export type ThemeContextType = {
   theme: Theme
+  color?: string
   toggleTheme: () => void
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: Theme.Light,
+  color: 'Red',
   toggleTheme: () => console.warn('no theme provider')
 })
 export const useTheme = () => useContext(ThemeContext)
