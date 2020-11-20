@@ -6,10 +6,15 @@ import { CommandContext } from './utils/CommandContext'
 
 interface Props {
   command: string
+  withDark?: boolean
 }
 
-function ReactTerminalCommand({ command }: Props) {
+function ReactTerminalCommand({ command, withDark }: Props) {
   const [theme, setTheme] = React.useState(Theme.Light)
+
+  React.useEffect(() => {
+    withDark ? setTheme(Theme.Dark) : setTheme(Theme.Light)
+  }, [withDark])
 
   const toggleTheme = () => {
     if (theme === Theme.Light) {
