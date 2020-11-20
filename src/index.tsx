@@ -23,7 +23,7 @@ function ReactTerminalCommand({ command }: Props) {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <CommandContext.Provider value={{ command }}>
         <div className={styles.container}>
-          <DevTerminal command={command} />
+          <DevTerminal />
         </div>
       </CommandContext.Provider>
     </ThemeContext.Provider>
