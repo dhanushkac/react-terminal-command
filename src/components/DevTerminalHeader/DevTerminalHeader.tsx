@@ -1,30 +1,32 @@
-import { Theme, useTheme } from '../../utils/ThemeContext';
-import { Sun, Copy, Moon } from 'react-feather';
-import * as React from 'react';
-import Button from '../Button/Button';
-import styles from './DevTerminalHeader.module.scss';
+import { Theme, useTheme } from '../../utils/ThemeContext'
+import { Sun, Copy, Moon } from 'react-feather'
+import * as React from 'react'
+import Button from '../Button/Button'
+import styles from './DevTerminalHeader.module.scss'
+import { useCommand } from '../../utils/CommandContext'
 
-const DevTerminalHeader = (props: {
-  command: string;
-  setCopied: (value: boolean) => void;
-}) => {
-  const { theme, toggleTheme } = useTheme();
-  const { command, setCopied } = props;
+interface Props {
+  setCopied: (value: boolean) => void
+}
 
-  const isDark = theme === Theme.Dark;
+const DevTerminalHeader = ({ setCopied }: Props) => {
+  const { theme, toggleTheme } = useTheme()
+  const { command } = useCommand()
+
+  const isDark = theme === Theme.Dark
 
   const copyToClipBoard = async () => {
     try {
-      await navigator.clipboard.writeText(command);
-      setCopied(true);
+      await navigator.clipboard.writeText(command)
+      setCopied(true)
 
       setTimeout(() => {
-        setCopied(false);
-      }, 1000);
+        setCopied(false)
+      }, 1000)
     } catch (err) {
-      setCopied(false);
+      setCopied(false)
     }
-  };
+  }
 
   return (
     <div className={isDark ? styles.terminalHeaderDark : styles.terminalHeader}>
@@ -34,7 +36,7 @@ const DevTerminalHeader = (props: {
       />
       <Button icon={<Copy size={16} />} onClick={() => copyToClipBoard()} />
     </div>
-  );
-};
+  )
+}
 
-export default DevTerminalHeader;
+export default DevTerminalHeader

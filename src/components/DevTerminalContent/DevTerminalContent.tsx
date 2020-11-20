@@ -1,14 +1,15 @@
-import * as React from 'react';
-import { makeCommand } from '../../utils/TerminalHelper';
-import { Theme, useTheme } from '../../utils/ThemeContext';
-import styles from './DevTerminalContent.module.scss';
+import * as React from 'react'
+import { useCommand } from '../../utils/CommandContext'
+import { makeCommand } from '../../utils/TerminalHelper'
+import { Theme, useTheme } from '../../utils/ThemeContext'
+import styles from './DevTerminalContent.module.scss'
 
-const DevTerminalContent = (props: { command: string }) => {
-  const { command } = props;
+const DevTerminalContent = () => {
+  const { command } = useCommand()
 
-  const { theme } = useTheme();
-  const isDark = theme === Theme.Dark;
-  const processed = makeCommand(command);
+  const { theme } = useTheme()
+  const isDark = theme === Theme.Dark
+  const processed = makeCommand(command)
 
   return (
     <div
@@ -16,8 +17,8 @@ const DevTerminalContent = (props: { command: string }) => {
       dangerouslySetInnerHTML={{
         __html: processed
       }}
-    ></div>
-  );
-};
+    />
+  )
+}
 
-export default DevTerminalContent;
+export default DevTerminalContent

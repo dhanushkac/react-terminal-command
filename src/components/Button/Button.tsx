@@ -3,8 +3,12 @@ import { Theme, useTheme } from '../../utils/ThemeContext'
 
 import styles from './Button.module.scss'
 
-const Button = (props: { icon: any; onClick: () => void }) => {
-  const { icon, onClick } = props
+interface Props {
+  icon: any
+  onClick: () => void
+}
+
+const Button = ({ icon, onClick }: Props) => {
   const { theme } = useTheme()
   const isDark = theme === Theme.Dark
 

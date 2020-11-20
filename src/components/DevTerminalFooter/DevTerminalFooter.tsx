@@ -1,14 +1,16 @@
-import * as React from 'react';
-import styles from './DevTerminalFooter.module.scss';
+import * as React from 'react'
+import styles from './DevTerminalFooter.module.scss'
 
-const DevTerminalFooter = (props: { isCopied: boolean }) => {
-  const { isCopied } = props;
+interface Props {
+  isCopied: boolean
+}
 
+const DevTerminalFooter = ({ isCopied }: Props) => {
   return (
     <div className={styles.terminalFooter}>
       {isCopied && <span>copied!</span>}
     </div>
-  );
-};
+  )
+}
 
-export default DevTerminalFooter;
+export default DevTerminalFooter
