@@ -1,121 +1,62 @@
 @import './../../styles/variables';
 
-/* RED */
-
-.terminalContentDarkRed {
+@mixin terminalContent($color, $beforeColor) {
   span {
-    color: lighten($red, 20%);
+    color: lighten($color, 20%);
   }
 
   &::before {
-    color: $darkGray;
+    color: $beforeColor;
     content: '$';
   }
 }
 
-.terminalContentRed {
-  span {
-    color: $red;
-  }
+/* RED */
 
-  &::before {
-    color: $darkerGray;
-    content: '$';
-  }
+.terminalContentDarkRed {
+  @include terminalContent($red, $darkGray);
+}
+
+.terminalContentRed {
+  @include terminalContent($red, $darkerGray);
 }
 
 /*  GREEN */
 
 .terminalContentDarkGreen {
-  span {
-    color: lighten($green, 20%);
-  }
-
-  &::before {
-    color: $darkGray;
-    content: '$';
-  }
+  @include terminalContent($green, $darkGray);
 }
 
 .terminalContentGreen {
-  span {
-    color: $green;
-  }
-
-  &::before {
-    color: $darkerGray;
-    content: '$';
-  }
+  @include terminalContent($green, $darkerGray);
 }
 
 /* YELLOW */
 
 .terminalContentDarkYellow {
-  span {
-    color: lighten($yellow, 20%);
-  }
-
-  &::before {
-    color: $darkGray;
-    content: '$';
-  }
+  @include terminalContent($yellow, $darkGray);
 }
 
 .terminalContentYellow {
-  span {
-    color: $yellow;
-  }
-
-  &::before {
-    color: $darkerGray;
-    content: '$';
-  }
+  @include terminalContent($yellow, $darkerGray);
 }
 
 /* PURPLE */
 
 .terminalContentDarkPurple {
-  span {
-    color: lighten($purple, 20%);
-  }
-
-  &::before {
-    color: $darkGray;
-    content: '$';
-  }
+  @include terminalContent($purple, $darkGray);
 }
 
 .terminalContentPurple {
-  span {
-    color: $purple;
-  }
-
-  &::before {
-    color: $darkerGray;
-    content: '$';
-  }
+  @include terminalContent($purple, $darkerGray);
 }
 
 /* BLUE */
 
 .terminalContentDarkBlue {
-  span {
-    color: lighten($blue, 20%);
-  }
-
-  &::before {
-    color: $darkGray;
-    content: '$';
-  }
+  @include terminalContent($blue, $darkGray);
 }
 
 .terminalContentBlue {
-  span {
-    color: $blue;
-  }
-
-  &::before {
-    color: $darkerGray;
-    content: '$';
-  }
+  @include terminalContent($blue, $darkerGray);
 }

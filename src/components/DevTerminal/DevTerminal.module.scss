@@ -1,23 +1,20 @@
 @import './../../styles/variables';
 
-.terminal {
+@mixin terminal($backgroundColor, $color) {
   border-radius: 5px;
   padding: 0.5rem 1rem 1rem;
-  background-color: $white;
+  background-color: $backgroundColor;
   font-family: 'Roboto Mono', monospace;
-  color: $black;
+  color: $color;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease-in-out;
 }
 
+.terminal {
+  @include terminal($white, $black);
+}
+
 .terminalDark {
-  border-radius: 5px;
-  padding: 0.5rem 1rem 1rem;
-  background-color: $black;
-  font-family: 'Roboto Mono', monospace;
-  color: $lighterGray;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease-in-out;
+  @include terminal($black, $lighterGray);
 }
