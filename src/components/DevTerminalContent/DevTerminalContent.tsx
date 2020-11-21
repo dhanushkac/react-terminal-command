@@ -39,6 +39,7 @@ const DevTerminalContent = () => {
 
   return (
     <div
+      data-testid='terminal-content'
       className={isDark ? darkColor : lightColor}
       dangerouslySetInnerHTML={{
         __html: processed

@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './styles.module.scss'
 import DevTerminal from './components/DevTerminal/DevTerminal'
 import { Theme, ThemeContext } from './utils/ThemeContext'
 import { CommandContext } from './utils/CommandContext'
@@ -32,9 +31,7 @@ const ReactTerminalCommand = ({ command, withDark, color }: Props) => {
   return (
     <ThemeContext.Provider value={{ isDark, color: _color, toggleTheme }}>
       <CommandContext.Provider value={{ command }}>
-        <div className={styles.container}>
-          <DevTerminal />
-        </div>
+        <DevTerminal />
       </CommandContext.Provider>
     </ThemeContext.Provider>
   )

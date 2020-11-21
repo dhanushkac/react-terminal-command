@@ -13,7 +13,11 @@ const Button = ({ icon, onClick }: Props) => {
 
   return (
     <div>
-      <div className={isDark ? styles.btnDark : styles.btn} onClick={onClick}>
+      <div
+        className={isDark ? styles.btnDark : styles.btn}
+        data-testid='button'
+        onClick={onClick}
+      >
         {icon}
       </div>
     </div>

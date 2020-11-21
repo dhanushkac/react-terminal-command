@@ -27,7 +27,7 @@ const DevTerminalHeader = ({ setCopied }: Props) => {
   }
 
   return (
-    <div className={styles.terminalHeader}>
+    <div data-testid='terminal-header' className={styles.terminalHeader}>
       <Button
         icon={isDark ? <Sun size={16} /> : <Moon size={16} />}
         onClick={() => toggleTheme()}

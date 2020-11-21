@@ -7,8 +7,8 @@ interface Props {
 
 const DevTerminalFooter = ({ isCopied }: Props) => {
   return (
-    <div className={styles.terminalFooter}>
-      {isCopied && <span>copied!</span>}
+    <div data-testid='terminal-footer' className={styles.terminalFooter}>
+      <span data-testid='copied'>{isCopied ? 'copied!' : ''}</span>
     </div>
   )
 }

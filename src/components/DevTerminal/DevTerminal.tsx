@@ -10,7 +10,10 @@ const DevTerminal = () => {
   const { isDark } = useTheme()
 
   return (
-    <div className={isDark ? styles.terminalDark : styles.terminal}>
+    <div
+      data-testid='terminal'
+      className={isDark ? styles.terminalDark : styles.terminal}
+    >
       <DevTerminalHeader setCopied={(value: boolean) => setCopied(value)} />
       <DevTerminalContent />
       <DevTerminalFooter isCopied={isCopied} />
