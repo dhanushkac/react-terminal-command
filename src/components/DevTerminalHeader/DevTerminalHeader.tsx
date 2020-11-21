@@ -1,4 +1,4 @@
-import { Theme, useTheme } from '../../utils/ThemeContext'
+import { useTheme } from '../../utils/ThemeContext'
 import { Sun, Copy, Moon } from 'react-feather'
 import * as React from 'react'
 import Button from '../Button/Button'
@@ -10,10 +10,8 @@ interface Props {
 }
 
 const DevTerminalHeader = ({ setCopied }: Props) => {
-  const { theme, toggleTheme } = useTheme()
+  const { isDark, toggleTheme } = useTheme()
   const { command } = useCommand()
-
-  const isDark = theme === Theme.Dark
 
   const copyToClipBoard = async () => {
     try {

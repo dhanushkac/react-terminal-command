@@ -1,14 +1,13 @@
 import * as React from 'react'
 import { useCommand } from '../../utils/CommandContext'
 import { makeCommand, Color } from '../../utils/TerminalHelper'
-import { Theme, useTheme } from '../../utils/ThemeContext'
+import { useTheme } from '../../utils/ThemeContext'
 import styles from './DevTerminalContent.module.scss'
 
 const DevTerminalContent = () => {
   const { command } = useCommand()
 
-  const { theme, color } = useTheme()
-  const isDark = theme === Theme.Dark
+  const { isDark, color } = useTheme()
   const processed = makeCommand(command)
 
   type colorMap = Record<Color, { lightColor: string; darkColor: string }>

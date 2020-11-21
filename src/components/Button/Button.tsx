@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Theme, useTheme } from '../../utils/ThemeContext'
+import { useTheme } from '../../utils/ThemeContext'
 
 import styles from './Button.module.scss'
 
@@ -9,8 +9,7 @@ interface Props {
 }
 
 const Button = ({ icon, onClick }: Props) => {
-  const { theme } = useTheme()
-  const isDark = theme === Theme.Dark
+  const { isDark } = useTheme()
 
   return (
     <div>

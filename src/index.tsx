@@ -3,7 +3,6 @@ import styles from './styles.module.scss'
 import DevTerminal from './components/DevTerminal/DevTerminal'
 import { Theme, ThemeContext } from './utils/ThemeContext'
 import { CommandContext } from './utils/CommandContext'
-// eslint-disable-next-line no-unused-vars
 import { Color } from './utils/TerminalHelper'
 
 interface Props {
@@ -28,9 +27,10 @@ const ReactTerminalCommand = ({ command, withDark, color }: Props) => {
   }
 
   const _color = color || Color.RED
+  const isDark = theme === Theme.Dark
 
   return (
-    <ThemeContext.Provider value={{ theme, color: _color, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDark, color: _color, toggleTheme }}>
       <CommandContext.Provider value={{ command }}>
         <div className={styles.container}>
           <DevTerminal />
