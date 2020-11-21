@@ -55,13 +55,11 @@
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.9",
     "react-scripts": "^3.4.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2"
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2"
-  }
+  ]
 }
