@@ -1,10 +1,11 @@
 @import './../../styles/variables';
 
-@mixin terminal($backgroundColor, $color) {
+@mixin terminal($backgroundColor, $color, $borderColor) {
   border-radius: 5px;
   padding: 0.5rem 1rem 1rem;
   background-color: $backgroundColor;
   font-family: 'Roboto Mono', monospace;
+  border: 1px solid $borderColor;
   color: $color;
   display: flex;
   flex-direction: column;
@@ -13,9 +14,9 @@
 }
 
 .terminal {
-  @include terminal($white, $black);
+  @include terminal($white, $black, $lightGray);
 }
 
 .terminalDark {
-  @include terminal($black, $lighterGray);
+  @include terminal($black, $lighterGray, $black);
 }
