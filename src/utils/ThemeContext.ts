@@ -1,5 +1,4 @@
 import { createContext, useContext } from 'react'
-import { Color } from './TerminalHelper'
 
 export enum Theme {
   // eslint-disable-next-line no-unused-vars
@@ -16,7 +15,7 @@ export type ThemeContextType = {
 
 export const ThemeContext = createContext<ThemeContextType>({
   isDark: false,
-  color: Color.RED,
+  color: 'red',
   toggleTheme: () => console.warn('no theme provider')
 })
 export const useTheme = () => useContext(ThemeContext)

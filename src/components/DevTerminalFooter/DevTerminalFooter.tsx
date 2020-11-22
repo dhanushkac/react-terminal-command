@@ -1,15 +1,21 @@
 import * as React from 'react'
-import styles from './DevTerminalFooter.module.scss'
-
+import styled from 'styled-components'
 interface Props {
   isCopied: boolean
 }
 
+const Footer = styled.div`
+  display: flex;
+  align-self: flex-end;
+  font-size: 0.7em;
+  height: 15px;
+`
+
 const DevTerminalFooter = ({ isCopied }: Props) => {
   return (
-    <div data-testid='terminal-footer' className={styles.terminalFooter}>
+    <Footer data-testid='terminal-footer'>
       <span data-testid='copied'>{isCopied ? 'copied!' : ''}</span>
-    </div>
+    </Footer>
   )
 }
 

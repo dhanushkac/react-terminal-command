@@ -5,15 +5,13 @@ export function makeCommand(command: string): string {
   return span + rest
 }
 
-export enum Color {
-  // eslint-disable-next-line no-unused-vars
-  RED = 'Red',
-  // eslint-disable-next-line no-unused-vars
-  GREEN = 'Green',
-  // eslint-disable-next-line no-unused-vars
-  PURPLE = 'Purple',
-  // eslint-disable-next-line no-unused-vars
-  YELLOW = 'Yellow',
-  // eslint-disable-next-line no-unused-vars
-  BLUE = 'Blue'
+export const isValidHexColorCode = (_color: string): boolean => {
+  const pattern = /^#([0-9A-F]{3}){1,2}$/i
+  const isValid = pattern.test(_color)
+
+  if (!isValid) {
+    console.error('Invalid hex color code provided. Default will be used.')
+  }
+
+  return isValid
 }

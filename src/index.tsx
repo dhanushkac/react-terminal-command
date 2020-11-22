@@ -2,12 +2,12 @@ import React from 'react'
 import DevTerminal from './components/DevTerminal/DevTerminal'
 import { Theme, ThemeContext } from './utils/ThemeContext'
 import { CommandContext } from './utils/CommandContext'
-import { Color } from './utils/TerminalHelper'
+import { isValidHexColorCode } from './utils/TerminalHelper'
 
 interface Props {
   command: string
   withDark?: boolean
-  color?: Color
+  color?: string
 }
 
 const ReactTerminalCommand = ({ command, withDark, color }: Props) => {
@@ -25,7 +25,7 @@ const ReactTerminalCommand = ({ command, withDark, color }: Props) => {
     }
   }
 
-  const _color = color || Color.RED
+  const _color = color && isValidHexColorCode(color) ? color : 'red'
   const isDark = theme === Theme.Dark
 
   return (
@@ -37,6 +37,4 @@ const ReactTerminalCommand = ({ command, withDark, color }: Props) => {
   )
 }
 
-const CommandColor = Color
-
-export { ReactTerminalCommand, CommandColor }
+export default ReactTerminalCommand
