@@ -36,13 +36,13 @@ const Example = () => {
 ```tsx
 import React, { Component } from 'react'
 
-import ReactTerminalCommand, CommandColor from 'react-terminal-command'
+import ReactTerminalCommand from 'react-terminal-command'
 
 const Example = () => {
   return (
     <ReactTerminalCommand
       command='yarn install react-terminal-command'
-      color="#d40188"
+      color='#d40188'
       withDark
     />
   )
