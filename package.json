@@ -1,6 +1,6 @@
 {
   "name": "react-terminal-command",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A terminal command viewer in React",
   "author": "dhanushkac",
   "license": "MIT",
