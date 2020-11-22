@@ -10,7 +10,7 @@ export const isValidHexColorCode = (_color: string): boolean => {
   const isValid = pattern.test(_color)
 
   if (!isValid) {
-    console.error('Invalid hex color code provided. Default will be used.')
+    console.error('⛔️ Invalid hex color code provided. Default will be used.')
   }
 
   return isValid
