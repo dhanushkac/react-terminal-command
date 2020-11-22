@@ -12,7 +12,6 @@ test('Should render react-terminal-command', () => {
 
   expect(getByText(/install react-terminal-command/i)).toBeInTheDocument()
   expect(getByText(/yarn/i)).toBeInTheDocument()
-  expect(getByTestId('terminal')).toHaveClass('terminal')
   expect(getByTestId('terminal-header')).toBeInTheDocument()
   expect(getByTestId('terminal-content')).toBeInTheDocument()
   expect(getByTestId('terminal-footer')).toBeInTheDocument()
