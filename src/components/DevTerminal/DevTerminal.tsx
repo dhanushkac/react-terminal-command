@@ -15,7 +15,8 @@ const Terminal = styled.div`
   border-radius: 5px;
   padding: 0.5rem 1rem 1rem;
   background-color: ${({ backgroundColor }: Props) => backgroundColor};
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Fira Code', monospace;
+  font-size: 1.05em;
   border: 1px solid ${({ borderColor }: Props) => borderColor};
   color: ${({ color }: Props) => color};
   display: flex;
