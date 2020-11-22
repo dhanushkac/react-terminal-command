@@ -11,6 +11,7 @@ interface Props {
 }
 
 const Content = styled.div`
+  text-align: left;
   span {
     color: ${({ isDark, color }: Props) =>
       isDark ? lighten(0.2, color) : color};
