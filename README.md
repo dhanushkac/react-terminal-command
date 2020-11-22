@@ -5,6 +5,8 @@
 [![NPM](https://img.shields.io/npm/v/react-terminal-command.svg)](https://www.npmjs.com/package/react-terminal-command)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+![React terminal command](https://github.com/dhanushkac/react-terminal-command-home/blob/main/public/lib-in-action.gif)
+
 ## Install
 
 Using yarn
