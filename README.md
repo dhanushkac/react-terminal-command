@@ -34,7 +34,7 @@ const Example = () => {
 ## Advanced Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
 import ReactTerminalCommand from 'react-terminal-command'
 
